@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#66ABE9</color>
+    <color name="colorSecondary">#F06A6A</color>
+    <color name="app_logo_background">#f8fafe</color>
+    <color name="white">#eeeeee</color>
+    <color name="black">#000000</color>
+    <color name="eighty_percent_of_black">#696969</color>
+    <color name="fifty_percent_of_black">#80000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="light_shade_of_grey">#F4F4F4</color>
+    <color name="fifty_percent_of_gainsboro">#50DCDCDC</color>
+    <color name="background_grey">#fcfcfc</color>
+    <color name="colorPrimary_background">#D966ABE9</color>
+    <color name="sixty_percent_of_background_grey">#99fcfcfc</color>
+    <color name="background_grey_2">#f7f7f7</color>
+    <color name="gainsboro">#DCDCDC</color>
+    <color name="lightgray">#D3D3D3</color>
+    <color name="silver">#C0C0C0</color>
+    <color name="darkgray">#A9A9A9</color>
+    <color name="gray">#808080</color>
+    <color name="dimgray">#696969</color>
+    <color name="purple">#CC6767ff</color>
+    <color name="bright_orange">#E5892D</color>
+    <color name="faintblue">#6F87D6</color>
+    <color name="faintblue_secondary">#8B9FDE</color>
+    <color name="dark_red">#ba0000</color>
+    <color name="green">#3ae600</color>
+    <color name="gnt_ad_green">#3A6728</color>
+    <color name="bright_royal_blue">#577ae4</color>
+    <color name="bright_background_blue">#1877F2</color>
+</resources>

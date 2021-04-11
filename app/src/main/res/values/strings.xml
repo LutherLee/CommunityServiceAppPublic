@@ -1,0 +1,318 @@
+<resources>
+    <!-- General -->
+    <string name="app_name">Triber</string>
+    <string name="app_logo">App Logo</string>
+    <string name="email_text">Email</string>
+    <string name="username_text">Username</string>
+    <string name="password_text">Password</string>
+    <string name="confirm_password_text">Confirm Password</string>
+    <string name="password_reset_email_sent_message">Password Reset Email Sent. Please follow
+        the instructions in the email.</string>
+    <string name="registration_successful_text">Registration Successful!</string>
+    <string name="account_created_failed_update_account_details_error">Account Created but failed to
+        update account details. Please login and retry again</string>
+    <string name="back_button">Back Button</string>
+    <string name="confirm_logout_title">Confirm Logout</string>
+    <string name="confirm_logout_message">Are you sure you want to logout?</string>
+    <string name="change_username_successful_text">Successfully updated username!</string>
+    <string name="update_email_address_successful_text">Successfully updated email address!</string>
+    <string name="update_email_address_unsuccessful_text">Failed to update account email address.
+        Please check your internet connection and retry</string>
+    <string name="update_password_successful_text">Successfully updated password!</string>
+    <string name="current_password_text">Current Password</string>
+    <string name="recipient_review_text">Recipient Review: (Min 50 characters)</string>
+    <string name="error_changing_account_username">Failed to change account username.
+        Please check your internet connection and retry</string>
+    <string name="error_new_username_same_as_current_username">New username is same as current username</string>
+    <string name="error_new_email_same_as_current_email">New email address is same as current email address</string>
+    <string name="error_updating_account_password">Failed to update account password. Please check
+        your internet connection and retry</string>
+    <string name="error_too_many_requests">Too many consecutive authentication requests received.
+        Please try again later"</string>
+    <string name="default_notification_channel_id">1001</string>
+    <string name="banner_image_text">Banner Image</string>
+    <string name="cancel_text">Cancel</string>
+    <string name="unknown_error">Oops, an unknown error occurred</string>
+    <string name="confirm_exit_message">All information typed will be lost upon exit</string>
+
+    <!-- Recommendation Criteria -->
+    <string name="no_location_recommendation_criteria_selected">Please select at least one location</string>
+    <string name="error_missing_location_recommendation_criteria">Error occurred (Missing location criteria)!
+        Please retry setting up recommendation criteria"</string>
+    <string name="no_job_nature_recommendation_criteria_selected">Please select at least one job nature</string>
+    <string name="recommendation_generation_info">Recommendation are generated based on two factor:
+        \n1) User\'s recipient view and review history\n2) User\'s preferred recommendation criteria</string>
+
+    <!-- FAQ -->
+    <string name="no_faq_found_message">No FAQ Found</string>
+
+    <!-- Recipient Favorite -->
+    <string name="no_favorites_saved_text">No Favourites Saved</string>
+    <string name="favorite_require_login_message">Login to view saved favourites</string>
+    <string name="require_login_save_recipient_as_favorite_error">Login to save recipient as favourite</string>
+    <string name="recipient_removed_from_favorite">Removed from favourite</string>
+    <string name="recipient_added_to_favorite">Added to favourite</string>
+    <string name="no_favorites_saved_message">Store and keep track of your favourite recipient</string>
+    <string name="show_all_recipient_text">Show all Recipient</string>
+
+    <!-- Google Sign in -->
+    <string name="default_network_error">A network error (e.g. timeout, interrupted connection
+        or unreachable host) has occurred.</string>
+    <string name="google_sign_in_failed_error">The sign in attempt didn\'t succeed with the
+        current account.</string>
+    <string name="google_sign_in_internal_error">An internal error occurred. Retrying should
+        resolve the problem.</string>
+    <string name="google_sign_in_invalid_account_error">The client attempted to connect to the
+        service with an invalid
+        account name specified.</string>
+    <string name="google_sign_in_api_not_connected_error">The client attempted to call a method from
+        an API that failed to connect.</string>
+    <string name="google_sign_in_currently_in_progress_error">A sign in process is currently in
+        progress and the current one cannot continue.</string>
+    <string name="google_sign_in_error">The operation failed with no more detailed information.</string>
+    <string name="google_sign_in_interrupted_error">A blocking call was interrupted while waiting
+        and did not run to completion.</string>
+    <string name="google_sign_in_connection_suspended_during_call_error">The connection was suspended
+        while the call was in-flight.</string>
+    <string name="google_sign_in_reconnection_timed_out_error">The connection timed-out while
+        attempting to re-connect.</string>
+    <string name="google_sign_in_reconnection_timed_out_during_update_error">The connection timed-out
+        while waiting for
+        Google Play services to update.</string>
+    <string name="google_sign_in_timeout_error">Timed out while awaiting the result.</string>
+
+    <!-- Support -->
+    <string name="submit_text">Submit</string>
+    <string name="support_note_for_user">*** Kindly take note that the admin will contact you via
+        the email you supplied as soon as
+    possible. ***</string>
+    <string name="invalid_title_error_text">Title must not be empty</string>
+    <string name="invalid_message_error_text">Message must not be empty</string>
+    <string name="feedback_message_submit_error">Failed to submit feedback message! Please check your
+        internet connection and retry.</string>
+    <string name="feedback_message_submit_success">Feedback submitted!</string>
+
+    <!-- Rate Recipient -->
+
+    <!-- Shared Preferences -->
+    <string name="user_selected_location_recommendation_criteria">userSelectedLocationRecommendationCriteria</string>
+    <string name="user_selected_job_nature_recommendation_criteria">userSelectedJobNatureRecommendationCriteria</string>
+    <string name="has_set_recommendation_criteria">hasSetRecommendationCriteria</string>
+    <string name="has_announcement_subscription">hasAnnouncementSubscription</string>
+    <string name="has_reminder_subscription">hasReminderSubscription</string>
+    <string name="has_asked_to_setup_device_notification_settings">hasAskedToSetupDeviceNotificationSettings</string>
+    <string name="user_disable_reminder_notifications">userDisableReminderNotifications</string>
+    <string name="user_disable_announcement_notifications">userDisableAnnouncementNotifications</string>
+    <string name="recipient_item_last_fetch_timestamp">recipientItemLastFetchTimestamp</string>
+    <string name="recipient_review_last_fetch_timestamp">recipientReviewLastFetchTimestamp</string>
+    <string name="banner_last_fetch_timestamp">bannerLastFetchTimestamp</string>
+    <string name="crowdFunding_last_fetch_timestamp">crowdFundingLastFetchTimestamp</string>
+    <string name="faq_last_fetch_timestamp">faqLastFetchTimestamp</string>
+    <string name="jobNature_last_fetch_timestamp">jobNatureLastFetchTimestamp</string>
+    <string name="announcement_last_fetch_timestamp">announcementLastFetchTimestamp</string>
+    <string name="favorite_last_fetch_timestamp">favoriteLastFetchTimestamp</string>
+    <string name="recommendation_criteria_last_fetch_timestamp">recommendationCriteriaLastFetchTimestamp</string>
+
+    <!-- Permission -->
+    <string name="xiaomi_notification_related_permission_needed_message">This app requires you to manually enable
+        the <b>\"Autostart\"</b> and <b>\"Display pop-up windows while running in the background\"</b> permission
+        in the app settings for notification to work properly.\n</string>
+    <string name="app_permission_location_permission_required_message">Location permission required for using this feature.
+        Please enable \"location permission\" under App Permissions.\n"</string>
+    <string name="gps_permission_required_message">This feature requires GPS to work properly, do you want to enable it?\n</string>
+
+    <!-- Forgot Password Layout -->
+    <string name="forgot_password_icon_text">forgot_password_icon</string>
+    <string name="forgot_password_layout_title">Forgot Password</string>
+    <string name="reset_password_text">Reset Password</string>
+
+    <!-- Registration Layout -->
+    <string name="default_profile_picture_icon">default_profile_picture_icon</string>
+    <string name="registration_layout_title">Registration</string>
+    <string name="upload_a_profile_picture_text">Upload a Profile Picture</string>
+    <string name="register_text">Register</string>
+    <string name="invalid_username_error_text">Username should have maximum 20 characters in length</string>
+    <string name="invalid_whitespace_error_text">No leading and trailing whitespace is allowed</string>
+    <string name="invalid_confirm_password_error_text">Password does not match or is less than 6 characters in length</string>
+
+    <!-- Login Layout -->
+    <string name="login_layout_title">Login</string>
+    <string name="forgot_password_button_text">Forgot Password?</string>
+    <string name="or_text">or</string>
+    <string name="login_with_google_text">Login With Google</string>
+    <string name="invalid_email_error_text">Invalid email</string>
+    <string name="invalid_password_error_text">Password must be at least 6 characters in length.</string>
+
+    <!-- Notification Layout -->
+    <string name="announcement_title">Announcements</string>
+    <string name="title_text">Title</string>
+    <string name="deadline_date_text">Deadline Date (dd/mm/yyyy)</string>
+    <string name="message_text">Message</string>
+    <string name="reset_text">Reset</string>
+    <string name="done_text">Done</string>
+    <string name="channel_name">Default Notifications</string>
+    <string name="channel_description">This channel is for receiving announcements and reminders</string>
+    <string name="no_announcement_found_text">No announcement found</string>
+
+    <!-- Recipient Layout -->
+    <string name="no_recipient_review_found_title">No Recipient Review Found</string>
+    <string name="no_recipient_review_found_message">Be the first one to share your experience with the community!</string>
+    <string name="start_review_text">Start Review</string>
+    <string name="review_text">Review</string>
+    <string name="direction_text">Direction</string>
+    <string name="share_text">Share</string>
+    <string name="favourite_text">Favourite</string>
+    <string name="recommendation_empty">You have either viewed all recommended recipient or no
+        recipient match the recommendation criteria selected. Change recommendation criteria or
+        clear recommendation metadata to see more.</string>
+
+    <!-- Profile Layout -->
+    <string name="profile_picture_image">profile_picture_image</string>
+    <string name="faq_text">FAQs</string>
+    <string name="feedback_text">Feedback</string>
+    <string name="logout_text">Logout</string>
+    <string name="my_account_text">My Account</string>
+    <string name="change_username_text">Change username</string>
+    <string name="edit_profile_picture_text">Edit profile picture</string>
+    <string name="update_email_address_text">Update email address</string>
+    <string name="update_password_text">Update password</string>
+    <string name="created_on_text"><i>Created On:</i></string>
+
+    <!-- Suggestions Layout -->
+
+    <!-- Set Recommendation Criteria Layout -->
+    <string name="next_text">Next</string>
+    <string name="criteria_step_one">Step 1 of 2</string>
+    <string name="skip_text">Skip</string>
+    <string name="criteria_step_two_title">Choose all the job nature that you like</string>
+    <string name="select_all_text">Select All</string>
+    <string name="criteria_step_two">Step 2 of 2</string>
+    <string name="criteria_step_one_title">Choose which location you prefer to perform
+    community service</string>
+
+    <!-- Recipient Filter -->
+    <string name="filter_by_text">Filter by</string>
+    <string name="filter_text">Filter</string>
+    <string name="job_nature_text">Job Nature</string>
+    <string name="location_text">Location</string>
+    <string name="rating_text">Rating</string>
+    <string name="no_result_found_text">No Result Found</string>
+    <string name="default_search_and_filter_title">Searching for</string>
+    <string name="filter_item_count">%d recipient found</string>
+    <string name="show_all_recipient_query">SELECT * FROM recipient</string>
+    <string name="clear_filter">Clear Filter</string>
+    <string name="sort_recipient_by_distance_text">Sort Recipient By Distance</string>
+
+    <string-array name="rating_filter">
+        <item>1 Star &amp; Up</item>
+        <item>2 Stars &amp; Up</item>
+        <item>3 Stars &amp; Up</item>
+        <item>4 Stars &amp; Up</item>
+        <item>5 Stars</item>
+    </string-array>
+
+    <string-array name="recipient_review_tag_negative_review">
+        <item>Need Improvement</item>
+    </string-array>
+
+    <string-array name="recipient_review_tag_positive_review">
+        <item>Helpful</item>
+        <item>Recommended</item>
+        <item>Informative</item>
+        <item>Efficient</item>
+    </string-array>
+
+    <string-array name="recipient_review_tag_neutral_review">
+        <item>Helpful</item>
+        <item>Recommended</item>
+        <item>Informative</item>
+        <item>Efficient</item>
+        <item>Need Improvement</item>
+    </string-array>
+
+    <array name="states_array_of_arrays">
+        <item>@array/KUL</item>
+        <item>@array/PJY</item>
+        <item>@array/SGR</item>
+    </array>
+    <array name="KUL">
+        <item>KUL</item>
+        <item>Kuala Lumpur</item>
+    </array>
+    <array name="PJY">
+        <item>PJY</item>
+        <item>Putrajaya</item>
+    </array>
+    <array name="SGR">
+        <item>SGR</item>
+        <item>Selangor</item>
+    </array>
+
+    <!-- Recipient Search And Filter -->
+    <string name="navigation_drawer_open">Open DrawerLayout</string>
+    <string name="navigation_drawer_close">Close DrawerLayout</string>
+    <string name="default_search_title">Showing All Recipients</string>
+
+    <!-- Home Layout -->
+    <string name="categories_text">Categories</string>
+    <string name="category_advocacy">Advocacy</string>
+    <string name="category_animal_welfare">Animal Welfare</string>
+    <string name="category_children">Children</string>
+    <string name="category_culture">Culture</string>
+    <string name="category_differently_abled">Differently Abled</string>
+    <string name="category_education">Education</string>
+    <string name="category_environment">Environment</string>
+    <string name="category_featured_organisations">Featured Organisations</string>
+    <string name="category_health">Health</string>
+    <string name="category_orang_asli">Orang Asli</string>
+    <string name="category_other_communitites">Other Communities</string>
+    <string name="category_recommended">Recommended</string>
+    <string name="category_refugees">Refugees</string>
+    <string name="category_senior_citizens">Senior Citizens</string>
+    <string name="category_single_parents">Single Parents</string>
+    <string name="category_social_enterprise">Social Enterprise</string>
+    <string name="category_sponsors">Sponsors</string>
+    <string name="category_support_groups">Support Groups</string>
+    <string name="category_tax_exemption">Tax Exemption</string>
+    <string name="category_women">Women</string>
+    <string name="category_youth">Youth</string>
+    <string name="show_all_category">Show All</string>
+    <string name="discover_volunteering_platform_message">Explore available volunteering opportunities in Malaysia</string>
+    <string name="volunteering_directory_text">Volunteering Directory</string>
+
+    <!-- Recipient_item Layout -->
+    <string name="recipient_address">Address: </string>
+    <string name="recipient_contact">Contact: </string>
+    <string name="recipient_fax">Fax: </string>
+    <string name="recipient_email">Email: </string>
+    <string name="recipient_image">recipient image</string>
+    <string name="recipient_website">Website: </string>
+    <string name="rating_icon">rating icon</string>
+    <string name="recipient_registration_num">Registration No: </string>
+    <string name="established_since_text">Established Since </string>
+
+    <!-- Bottom Sheet Layout -->
+    <string name="bottom_sheet_title_for_add_notification">Select which notification to add</string>
+    <string name="bottom_sheet_title_for_show_all_job_nature_category">Recipient Job Nature Categories</string>
+    <string name="bottom_sheet_title_for_map_fragment">Select a marker or action</string>
+    <string name="unable_to_get_current_location_error">Unable to get current location. Please check
+        if GPS and network connection is enabled</string>
+    <string name="bottom_sheet_title_for_add_reminder">Add reminder</string>
+    <string name="bottom_sheet_title_for_add_announcement">Add announcement</string>
+    <string name="reminder_text">Reminder</string>
+    <string name="send_recipient_update_info_text">Send Recipient Update Info Reminder</string>
+    <string name="announcement_text">Announcement</string>
+    <string name="add_notification_error_message">Error occurred! Please check your internet connection and retry again.</string>
+    <string name="add_announcement_successful_message">Successfully added announcement!</string>
+    <string name="add_reminder_successful_message">Successfully added reminder!</string>
+    <string name="add_reminder_deadline_date_error">The selected deadline date is invalid. Please select a date that is one day ahead from today.</string>
+    <string name="new_password_text">New Password</string>
+    <string name="new_email_address_text">New Email Address</string>
+    <string name="user_sensitive_detail_modification_warning">Note: On successful user details changed will
+        result in other currently logged in device to force logout for security reason</string>
+
+    <!-- Strings related to login -->
+    <string name="login_with_google_sign_in">LoginWithGoogleSignIn</string>
+    <string name="is_user_already_login">isUserAlreadyLogin</string>
+
+</resources>

@@ -1,0 +1,58 @@
+[
+    {
+      "updatedAt": 1616655856,
+      "bannerWebsiteLink": "https://www.dosomething.gd/e/",
+      "bannerDetail": "Do Something Good is one of Malaysia's largest volunteering platform. Do Something Good connects NGOs to people and corporate groups to create opportunities for service and social change.",
+      "bannerImageUrl": "https://res.cloudinary.com/triber/image/upload/v1613023001/banner/Do_Something_Good.jpg",
+      "bannerID": "9UizFS5ptO01EujITwz5",
+      "bannerName": "Do Something Good"
+    },
+    {
+      "bannerID": "DS7d9C5WnT6Xz0CfxiRJ",
+      "bannerWebsiteLink": "https://www.sols247.org/",
+      "bannerImageUrl": "https://res.cloudinary.com/triber/image/upload/v1616654214/banner/Sols_247.png",
+      "bannerName": "SOLS 24/7",
+      "bannerDetail": "SOLS 24/7 is an award-winning humanitarian organization, committed to serve, educate and empower poor and underserved communities. Through various education and social empowerment programs, we work unconditionally towards transforming underserved communities to develop their true potential and break the cycle of poverty.",
+      "updatedAt": 1616655856
+    },
+    {
+      "bannerDetail": "Sedunia is the place for you to make a little difference in your everyday life, whether it's around you or within yourself. Designed to be used by individuals and organisations, Sedunia is a platform that helps you to create, coordinate and track impact in the communities around you.",
+      "updatedAt": 1616655856,
+      "bannerWebsiteLink": "https://www.sedunia.me/missions",
+      "bannerImageUrl": "https://www.sedunia.me/img/logo-share-xxl-2.jpg",
+      "bannerID": "IxMg4wRxo3vK8MSWDQBG",
+      "bannerName": "Sedunia"
+    },
+    {
+      "bannerName": "NGOHub",
+      "bannerWebsiteLink": "https://www.ngohub.asia/",
+      "bannerDetail": "NGOhub is an online and offline platform dedicated to enable, empower and serve NGOs. We champion effectiveness, transparency and sustainability, and we connect NGOs to information, resources, experts, volunteers and grants. Above all, we connect NGOs to each other, to inspire collaboration to solve society’s problems together.",
+      "bannerID": "bJjSuJp1QtumxcYP3jaf",
+      "updatedAt": 1616655856,
+      "bannerImageUrl": "https://res.cloudinary.com/triber/image/upload/v1616600075/banner/NGOHub.jpg"
+    },
+    {
+      "bannerWebsiteLink": "https://www.afsmas.org/volunteer/",
+      "bannerImageUrl": "https://d22dvihj4pfop3.cloudfront.net/wp-content/uploads/sites/75/2017/01/26031833/cropped-AFS_Logo-Malaysia1.png",
+      "bannerID": "fY3Le0oOaZAIe95SOekc",
+      "bannerDetail": "AFS prepares and activates future leaders, global citizens and changemakers with essential 21st century intercultural skills to engage, lead and collaborate effectively in different cultural settings. Our international exchange, study abroad and volunteer programs are supported by research-based intercultural learning journeys facilitated by trained AFS volunteers and staff.",
+      "updatedAt": 1616655856,
+      "bannerName": "AFS Malaysia"
+    },
+    {
+      "updatedAt": 1616655856,
+      "bannerName": "World Vision Malaysia",
+      "bannerID": "tVEM0JC33ixuxN5Tx317",
+      "bannerDetail": "World Vision is an international Christian humanitarian organisation dedicated to working with children and families to overcome extreme poverty and injustice. World Vision serves all people regardless of religion, race, ethnicity or gender.",
+      "bannerImageUrl": "https://3.bp.blogspot.com/-16YzfjTTQo0/TpIFvI2aybI/AAAAAAAABes/yiTfePoieuE/s1600/World+Vision+Logo.jpg",
+      "bannerWebsiteLink": "https://www.worldvision.com.my/GetInvolved/Pages/Volunteer.aspx"
+    },
+    {
+      "bannerWebsiteLink": "https://www.gooverseas.com/volunteer-abroad/malaysia",
+      "bannerDetail": "Go Overseas is a company of seasoned travlers who experienced first hand what a stressful and difficult experience it is to find reliable information about programs abroad. Their mission is to give you the knowledge and confidence to choose the right program for your next adventure in various countries, empowering human connection through perspective-changing travel.",
+      "bannerName": "Go Overseas",
+      "bannerImageUrl": "https://res.cloudinary.com/triber/image/upload/v1616473854/banner/Go_Overseas.jpg",
+      "bannerID": "zzBkAIXbcosnGtkKEDXs",
+      "updatedAt": 1616655856
+    }
+]

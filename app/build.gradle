@@ -1,0 +1,209 @@
+apply plugin: 'com.android.application'
+apply plugin: 'dagger.hilt.android.plugin'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-parcelize'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'androidx.navigation.safeargs.kotlin'
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "com.example.communityserviceapp"
+        minSdkVersion 24
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        // Storing Google Maps API KEY in properties file in project root
+        // See: https://developers.google.com/maps/documentation/android-sdk/get-api-key#add_key
+        Properties properties = new Properties()
+        if (rootProject.file("local.properties").exists()) {
+            properties.load(rootProject.file("local.properties").newDataInputStream())
+        }
+
+        // Inject the Maps API key into the manifest
+        manifestPlaceholders = [mapsApiKey: properties.getProperty("MAPS_API_KEY", "")]
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            debuggable false
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    buildFeatures {
+        dataBinding true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    // Show the exact class that caused "kaptDebugException". My favourite exception...
+    // See: https://kotlinlang.org/docs/reference/kapt.html#java-compiler-options
+    kapt {
+        correctErrorTypes true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.annotation:annotation:1.2.0'
+
+    // Support for Multidex (for method over 64k)
+    // See: https://developer.android.com/studio/build/multidex?authuser=1
+    def multidex_version = "2.0.1"
+    implementation "androidx.multidex:multidex:$multidex_version"
+
+    // Cloudinary - Image & Video Hosting CDN
+    // See: https://cloudinary.com/documentation/android_integration#overview
+    def cloudinary_android_version = '1.30.0'
+    implementation "com.cloudinary:cloudinary-android:$cloudinary_android_version"
+
+    // Arrow Tooltip
+    // See: https://github.com/skydoves/Balloon
+    def balloon_version = "1.3.3"
+    implementation "com.github.skydoves:balloon:$balloon_version"
+
+    def activity_ktx_version = "1.2.2"
+    def fragment_ktx_version = "1.3.2"
+    implementation "androidx.activity:activity-ktx:$activity_ktx_version"
+    implementation "androidx.fragment:fragment-ktx:$fragment_ktx_version"
+
+    // Androidx related dependencies
+    def appcompat_version = "1.3.0-rc01"
+    def constraint_layout_version = "2.0.4"
+    def legacy_support_v4_version = "1.0.0"
+    implementation "androidx.appcompat:appcompat:$appcompat_version"
+    implementation "androidx.constraintlayout:constraintlayout:$constraint_layout_version"
+    implementation "androidx.legacy:legacy-support-v4:$legacy_support_v4_version"
+
+    // Lifecycle dependencies
+    def lifecycle_version = '2.3.1'
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version" // Viewmodel
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version" // Livedata
+    implementation "androidx.lifecycle:lifecycle-viewmodel-savedstate:$lifecycle_version" // Saved state module for ViewModel
+
+    // Navigation Component dependencies
+    implementation "androidx.navigation:navigation-fragment-ktx:$navigation_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$navigation_version"
+
+    // Material Design dependency
+    // Note: Upgrading the material design version will change the way some layout look
+    // like for those with TextInputLayout (e.g. Login, registration, etc.)
+    def material_version = "1.2.0-alpha02"
+    implementation "com.google.android.material:material:$material_version"
+
+    // Firebase related dependencies
+    implementation platform('com.google.firebase:firebase-bom:26.5.0')
+    implementation "com.google.firebase:firebase-messaging" // FCM
+    implementation "com.google.firebase:firebase-database" // Real-time database
+    implementation "com.google.firebase:firebase-auth" // Authentication
+    implementation "com.google.firebase:firebase-firestore" // Firestore database
+    implementation "com.google.firebase:firebase-functions" // Cloud functions
+
+    // FirebaseUI for Cloud Storage (Open Source library)
+    // See: https://github.com/firebase/FirebaseUI-Android
+    def firebase_ui_storage_version = "6.4.0"
+    implementation "com.firebaseui:firebase-ui-storage:$firebase_ui_storage_version"
+
+    // Google Account Login dependency
+    def play_services_auth_version = '19.0.0'
+    implementation "com.google.android.gms:play-services-auth:$play_services_auth_version"
+
+    // Glide dependency
+    def glide_version = "4.12.0"
+    implementation "com.github.bumptech.glide:glide:$glide_version"
+    kapt "com.github.bumptech.glide:compiler:$glide_version"
+
+    // Google Location and Activity Recognition dependency (for fused location provider)
+    def play_services_location_version = "18.0.0"
+    implementation "com.google.android.gms:play-services-location:$play_services_location_version"
+
+    // Play services for Google Maps
+    def play_services_maps_version = "17.0.0"
+    implementation "com.google.android.gms:play-services-maps:$play_services_maps_version"
+
+    // Google Maps Utility Library
+    // Note: The reason to use google map v2 is due to Marker Cluster feature is only available
+    // in this version. If Google maps v3 support it in the future, do consider to switch
+    def android_maps_utils_version = "2.2.0"
+    implementation "com.google.maps.android:android-maps-utils:$android_maps_utils_version"
+
+    // Room persistence library
+    def room_version = '2.3.0-rc01'
+    implementation "androidx.room:room-runtime:$room_version"
+    implementation "androidx.room:room-ktx:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+
+    // Hilt
+    def hilt_jetpack_version = "1.0.0-beta01"
+    def hilt_lifecycle_viewmodel_version = "1.0.0-alpha03"
+    implementation "com.google.dagger:hilt-android:$hilt_version"
+    implementation "androidx.hilt:hilt-work:$hilt_jetpack_version"
+    implementation "androidx.hilt:hilt-navigation-fragment:$hilt_jetpack_version" // navgraph scoping
+    implementation "androidx.hilt:hilt-lifecycle-viewmodel:$hilt_lifecycle_viewmodel_version"
+    kapt "com.google.dagger:hilt-compiler:$hilt_version"
+    kapt "androidx.hilt:hilt-compiler:$hilt_jetpack_version"
+
+    // Work Manager Dependency
+    def work_runtime_version = '2.5.0'
+    implementation "androidx.work:work-runtime-ktx:$work_runtime_version"
+
+    // Paging
+    def paging_version = '3.0.0-beta03'
+    implementation "androidx.paging:paging-runtime-ktx:$paging_version"
+    implementation "androidx.paging:paging-guava:$paging_version"
+
+    // Third party library for Searchview
+    // See: https://github.com/arimorty/floatingsearchview
+    def floating_search_view_version = "2.1.1"
+    implementation "com.github.arimorty:floatingsearchview:$floating_search_view_version"
+
+    // Third party library for Logging
+    // See: https://github.com/JakeWharton/timber
+    def timber_version = "4.7.1"
+    implementation "com.jakewharton.timber:timber:$timber_version"
+
+    // Dynamic Animation library to animate movement using spring physics
+    // See: https://developer.android.com/guide/topics/graphics/spring-animation
+    def dynamic_animation_version = "1.0.0"
+    implementation "androidx.dynamicanimation:dynamicanimation:$dynamic_animation_version"
+
+    // Security Library (for sharedPreferences and read & write file)
+    // See: https://developer.android.com/topic/security/data
+    def security_crypto_version = '1.1.0-alpha03'
+    def security_identity_credential_version = "1.0.0-alpha02"
+    implementation "androidx.security:security-crypto:$security_crypto_version"
+    implementation "androidx.security:security-identity-credential:$security_identity_credential_version"
+    // For Identity Credential APIs
+
+    // Lottie (for animated picture)
+    def lottie_version = '3.5.0'
+    implementation "com.airbnb.android:lottie:$lottie_version"
+
+    // ImageView Helper with pinch-to-zoom and swipe-to-dismiss gesture
+    // See: https://github.com/igreenwood/loupe
+    def loupe_version = '1.2.1'
+    def loupe_extension_version = '1.0.0'
+    implementation "com.igreenwood.loupe:loupe:$loupe_version"
+    implementation "com.igreenwood.loupe:extensions:$loupe_extension_version"
+
+    /** Testing **/
+    debugImplementation "androidx.fragment:fragment-testing:$fragment_ktx_version"// Testing Fragments in Isolation
+    androidTestImplementation "androidx.navigation:navigation-testing:$navigation_version"// Testing Navigation
+}

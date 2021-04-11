@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="com.example.communityserviceapp.ui.forgotPassword.ForgotPasswordFragment"
+        tools:layout="@layout/forgot_password_fragment"
+        android:label="ForgotPasswordFragment" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.communityserviceapp.ui.login.LoginFragment"
+        tools:layout="@layout/login_fragment"
+        android:label="LoginFragment">
+        <action
+            android:id="@+id/action_loginFragment_to_forgotPasswordFragment"
+            app:destination="@id/forgotPasswordFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_registrationFragment"
+            app:destination="@id/registrationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.example.communityserviceapp.ui.registration.RegistrationFragment"
+        tools:layout="@layout/registration_fragment"
+        android:label="RegistrationFragment" >
+        <action
+            android:id="@+id/action_registrationFragment_to_profileFragment"
+            app:destination="@id/profileFragment"
+            app:popUpTo="@id/profileFragment"
+            app:popUpToInclusive="true"
+            app:launchSingleTop="true"
+            app:enterAnim="@anim/fast_fade_in" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.communityserviceapp.ui.profile.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/profile_fragment" >
+        <action
+            android:id="@+id/action_profileFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/enter_from_down"
+            app:popExitAnim="@anim/exit_from_up"
+            app:popUpTo="@id/loginFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_feedbackFragment"
+            app:destination="@id/feedbackFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_faqFragment"
+            app:destination="@id/faqFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_updateEmailAddressBottomSheet"
+            app:destination="@id/updateEmailAddressBottomSheet" />
+        <action
+            android:id="@+id/action_profileFragment_to_changeUsernameBottomSheet"
+            app:destination="@id/changeUsernameBottomSheet" />
+        <action
+            android:id="@+id/action_profileFragment_to_updatePasswordBottomSheet"
+            app:destination="@id/updatePasswordBottomSheet" />
+        <action
+            android:id="@+id/action_profileFragment_to_imageViewDetailBottomSheet"
+            app:destination="@id/imageViewDetailBottomSheet" />
+        <action
+            android:id="@+id/action_profileFragment_to_announcementFragment"
+            app:destination="@id/announcementFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_uploadPictureOptionBottomSheet"
+            app:destination="@id/uploadPictureOptionBottomSheet" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.example.communityserviceapp.ui.map.MapFragment"
+        android:label="map_fragment"
+        tools:layout="@layout/map_fragment" >
+        <action
+            android:id="@+id/action_mapFragment_to_recipientBottomSheet"
+            app:destination="@id/recipientBottomSheet" />
+        <action
+            android:id="@+id/action_mapFragment_to_rateReviewRecipientBottomSheet"
+            app:destination="@id/rateReviewRecipientBottomSheet" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.communityserviceapp.ui.home.HomeFragment"
+        android:label="home_fragment"
+        tools:layout="@layout/home_fragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_recipientBottomSheet"
+            app:destination="@id/recipientBottomSheet" />
+        <action
+            android:id="@+id/action_homeFragment_to_recipientFilterFragment"
+            app:destination="@id/recipientFilterFragment"
+            app:launchSingleTop="true" />
+        <action
+            android:id="@+id/action_homeFragment_to_recipientFavoriteFragment"
+            app:destination="@id/recipientFavoriteFragment"
+            app:launchSingleTop="true" />
+        <action
+            android:id="@+id/action_homeFragment_to_showAllJobNatureCategoryBottomSheet"
+            app:destination="@id/showAllJobNatureCategoryBottomSheet" />
+        <action
+            android:id="@+id/action_homeFragment_to_recipientSearchFragment"
+            app:destination="@id/recipientSearchFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_setRecommendationCriteriaFragment"
+            app:destination="@id/setRecommendationCriteriaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/feedbackFragment"
+        android:name="com.example.communityserviceapp.ui.feedback.FeedbackFragment"
+        android:label="FeedbackFragment"
+        tools:layout="@layout/feedback_fragment" >
+        <argument
+            android:name="email"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="title"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+    <dialog
+        android:id="@+id/recipientBottomSheet"
+        android:name="com.example.communityserviceapp.ui.recipient.RecipientBottomSheet"
+        android:label="RecipientBottomSheet"
+        tools:layout="@layout/recipient_bottom_sheet" >
+        <action
+            android:id="@+id/action_recipientBottomSheet_to_rateReviewRecipientBottomSheet"
+            app:destination="@id/rateReviewRecipientBottomSheet" />
+        <argument
+            android:name="recipient"
+            app:argType="com.example.communityserviceapp.data.model.Recipient" />
+        <action
+            android:id="@+id/action_recipientBottomSheet_to_recipientReviewBottomSheet"
+            app:destination="@id/recipientReviewBottomSheet" />
+        <action
+            android:id="@+id/action_recipientBottomSheet_to_recipientFavoriteFragment"
+            app:destination="@id/recipientFavoriteFragment"
+            app:launchSingleTop="true" />
+        <action
+            android:id="@+id/action_recipientBottomSheet_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_recipientBottomSheet_to_feedbackFragment"
+            app:destination="@id/feedbackFragment" />
+    </dialog>
+    <fragment
+        android:id="@+id/recipientFilterFragment"
+        android:name="com.example.communityserviceapp.ui.recipient.filter.RecipientFilterFragment"
+        android:label="RecipientFilterFragment"
+        tools:layout="@layout/recipient_filter_fragment">
+        <argument
+            android:name="SQLQuery"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <argument
+            android:name="searchKeyword"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="filterKeywords"
+            app:argType="string[]"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_recipientFilterFragment_to_recipientBottomSheet"
+            app:destination="@id/recipientBottomSheet" />
+        <action
+            android:id="@+id/action_recipientFilterFragment_to_recipientFavoriteFragment"
+            app:destination="@id/recipientFavoriteFragment"
+            app:launchSingleTop="true" />
+        <action
+            android:id="@+id/action_recipientFilterFragment_to_recipientSearchFragment"
+            app:destination="@id/recipientSearchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/setRecommendationCriteriaFragment"
+        android:name="com.example.communityserviceapp.ui.setRecommendationCriteria.SetRecommendationCriteriaFragment"
+        android:label="SetRecommendationCriteriaFragment"
+        tools:layout="@layout/set_recommendation_criteria_fragment">
+    </fragment>
+    <fragment
+        android:id="@+id/faqFragment"
+        android:name="com.example.communityserviceapp.ui.faq.FaqFragment"
+        android:label="FaqFragment"
+        tools:layout="@layout/faq_fragment" />
+    <fragment
+        android:id="@+id/recipientFavoriteFragment"
+        android:name="com.example.communityserviceapp.ui.recipient.favorite.RecipientFavoriteFragment"
+        android:label="RecipientFavoriteFragment"
+        tools:layout="@layout/recipient_favorite_fragment" >
+        <action
+            android:id="@+id/action_recipientFavoriteFragment_to_recipientBottomSheet"
+            app:destination="@id/recipientBottomSheet" />
+        <action
+            android:id="@+id/action_recipientFavoriteFragment_to_recipientFilterFragment"
+            app:destination="@id/recipientFilterFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/recipientFavoriteFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_recipientFavoriteFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/showAllJobNatureCategoryBottomSheet"
+        android:name="com.example.communityserviceapp.ui.home.ShowAllJobNatureCategoryBottomSheet"
+        android:label="ShowAllJobNatureCategoryBottomSheet"
+        tools:layout="@layout/show_all_job_nature_category_bottom_sheet" >
+        <action
+            android:id="@+id/action_showAllJobNatureCategoryBottomSheet_to_recipientFilterFragment"
+            app:destination="@id/recipientFilterFragment"
+            app:launchSingleTop="true" />
+    </dialog>
+    <dialog
+        android:id="@+id/updateEmailAddressBottomSheet"
+        android:name="com.example.communityserviceapp.ui.profile.changeProfileDetails.UpdateEmailAddressBottomSheet"
+        android:label="UpdateEmailAddressBottomSheet"
+        tools:layout="@layout/update_email_address_bottom_sheet" />
+    <dialog
+        android:id="@+id/changeUsernameBottomSheet"
+        android:name="com.example.communityserviceapp.ui.profile.changeProfileDetails.ChangeUsernameBottomSheet"
+        android:label="ChangeUsernameBottomSheet"
+        tools:layout="@layout/change_username_bottom_sheet" />
+    <dialog
+        android:id="@+id/updatePasswordBottomSheet"
+        android:name="com.example.communityserviceapp.ui.profile.changeProfileDetails.UpdatePasswordBottomSheet"
+        android:label="UpdatePasswordBottomSheet"
+        tools:layout="@layout/update_password_bottom_sheet" />
+    <dialog
+        android:id="@+id/imageViewDetailBottomSheet"
+        android:name="com.example.communityserviceapp.ui.profile.ImageViewDetailBottomSheet"
+        android:label="ImageViewDetailBottomSheet"
+        tools:layout="@layout/image_view_detail_bottom_sheet" />
+    <dialog
+        android:id="@+id/rateReviewRecipientBottomSheet"
+        android:name="com.example.communityserviceapp.ui.recipient.review.RateReviewRecipientBottomSheet"
+        android:label="RateReviewRecipientBottomSheet"
+        tools:layout="@layout/rate_review_recipient_bottom_sheet" >
+        <argument
+            android:name="currentUserID"
+            app:argType="string" />
+        <argument
+            android:name="recipient"
+            app:argType="com.example.communityserviceapp.data.model.Recipient" />
+    </dialog>
+    <fragment
+        android:id="@+id/announcementFragment"
+        android:name="com.example.communityserviceapp.ui.announcement.AnnouncementFragment"
+        android:label="AnnouncementFragment"
+        tools:layout="@layout/announcement_fragment" />
+    <dialog
+        android:id="@+id/uploadPictureOptionBottomSheet"
+        android:name="com.example.communityserviceapp.ui.profile.changeProfileDetails.UploadPictureOptionBottomSheet"
+        android:label="UploadPictureOptionBottomSheet"
+        tools:layout="@layout/upload_picture_option_bottom_sheet" />
+    <fragment
+        android:id="@+id/recipientSearchFragment"
+        android:name="com.example.communityserviceapp.ui.recipient.search.RecipientSearchFragment"
+        android:label="RecipientSearchFragment"
+        tools:layout="@layout/recipient_search_fragment" >
+        <action
+            android:id="@+id/action_recipientSearchFragment_to_recipientBottomSheet"
+            app:destination="@id/recipientBottomSheet" />
+    </fragment>
+    <dialog
+        android:id="@+id/recipientReviewBottomSheet"
+        android:name="com.example.communityserviceapp.ui.recipient.review.RecipientReviewBottomSheet"
+        android:label="RecipientReviewBottomSheet"
+        tools:layout="@layout/recipient_review_bottom_sheet" >
+        <argument
+            android:name="recipient"
+            app:argType="com.example.communityserviceapp.data.model.Recipient" />
+        <action
+            android:id="@+id/action_recipientReviewBottomSheet_to_rateReviewRecipientBottomSheet"
+            app:destination="@id/rateReviewRecipientBottomSheet" />
+    </dialog>
+</navigation>

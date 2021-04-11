@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="56dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/loading_user_details_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminateTint="@color/colorPrimary"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Fetching User Details..."
+                android:textSize="16sp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                app:layout_constraintTop_toBottomOf="@id/progressBar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/colorPrimary">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                android:layout_marginBottom="56dp"
+                tools:context=".ui.profile.ProfileFragment">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <FrameLayout
+                        android:id="@+id/header"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="20dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/logged_in_profile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:id="@+id/logged_in_profile_picture_image"
+                                android:layout_width="90dp"
+                                android:layout_height="90dp"
+                                android:layout_marginStart="30dp"
+                                android:layout_marginTop="30dp"
+                                android:transitionName="loggedInProfilePictureImage"
+                                android:contentDescription="@string/profile_picture_image"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/account_username"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="13dp"
+                                android:layout_marginEnd="28dp"
+                                android:paddingTop="52dp"
+                                android:textColor="@color/black"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:singleLine="true"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@id/logged_in_profile_picture_image"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/account_email"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="13dp"
+                                android:layout_marginTop="3dp"
+                                android:textColor="@color/black"
+                                android:textSize="13sp"
+                                app:layout_constraintStart_toEndOf="@id/logged_in_profile_picture_image"
+                                app:layout_constraintTop_toBottomOf="@+id/account_username" />
+
+                            <TextView
+                                android:id="@+id/created_on_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="13dp"
+                                android:text="@string/created_on_text"
+                                android:textColor="@color/black"
+                                android:textSize="13sp"
+                                app:layout_constraintStart_toEndOf="@id/logged_in_profile_picture_image"
+                                app:layout_constraintTop_toBottomOf="@+id/account_email" />
+
+                            <TextView
+                                android:id="@+id/account_created_on"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="3dp"
+                                android:textColor="@color/black"
+                                android:textSize="13sp"
+                                app:layout_constraintStart_toEndOf="@id/created_on_text"
+                                app:layout_constraintTop_toBottomOf="@+id/account_email" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/logout_button"
+                                style="@style/Widget.MaterialComponents.Button"
+                                android:layout_width="0dp"
+                                android:layout_height="58dp"
+                                android:layout_marginStart="28dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="28dp"
+                                android:background="@drawable/rounded_shape"
+                                android:backgroundTint="@color/colorSecondary"
+                                android:text="@string/logout_text"
+                                android:textColor="@color/white"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/logged_in_profile_picture_image" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/default_profile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:id="@+id/default_profile_picture_image"
+                                android:layout_width="180dp"
+                                android:layout_height="180dp"
+                                android:paddingTop="30dp"
+                                android:contentDescription="@string/profile_picture_image"
+                                android:src="@drawable/ic_baseline_account_circle_grey_26dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/login_button"
+                                style="@style/Widget.MaterialComponents.Button"
+                                android:layout_width="0dp"
+                                android:layout_height="58dp"
+                                android:layout_marginStart="28dp"
+                                android:layout_marginEnd="28dp"
+                                android:background="@drawable/rounded_shape"
+                                android:text="@string/login_layout_title"
+                                android:textColor="@color/white"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/default_profile_picture_image" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </FrameLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/my_account_settings"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toBottomOf="@+id/header">
+
+                        <View
+                            android:id="@+id/my_account_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"
+                            android:background="@color/fifty_percent_of_gainsboro"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="28dp"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/my_account_text"
+                            android:textColor="@color/dimgray"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/change_username_button"
+                            style="@style/my_account_text_material_button_style"
+                            android:text="@string/change_username_text"
+                            app:icon="@drawable/ic_baseline_account_circle_grey_26dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/my_account_view" />
+
+                        <View
+                            android:id="@+id/change_username_button_bottom_line"
+                            style="@style/view_as_bottom_line"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/change_username_button" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/edit_profile_picture_button"
+                            style="@style/my_account_text_material_button_style"
+                            android:text="@string/edit_profile_picture_text"
+                            app:icon="@drawable/ic_baseline_edit_color_primary_24dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/change_username_button_bottom_line" />
+
+                        <LinearLayout
+                            android:id="@+id/update_account_detail_container"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/edit_profile_picture_button">
+
+                            <View
+                                android:id="@+id/edit_profile_picture_button_bottom_line"
+                                style="@style/view_as_bottom_line" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/update_email_address_button"
+                                style="@style/my_account_text_material_button_style"
+                                android:text="@string/update_email_address_text"
+                                app:icon="@drawable/ic_baseline_email_color_primary_24dp" />
+
+                            <View
+                                android:id="@+id/update_email_address_button_bottom_line"
+                                style="@style/view_as_bottom_line" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/update_password_button"
+                                style="@style/my_account_text_material_button_style"
+                                android:text="@string/update_password_text"
+                                app:icon="@drawable/ic_baseline_assignment_color_primary_24dp" />
+
+                        </LinearLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <include
+                        android:id="@+id/app_settings"
+                        layout="@layout/app_settings"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/my_account_settings" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </ScrollView>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    </FrameLayout>
+
+</layout>

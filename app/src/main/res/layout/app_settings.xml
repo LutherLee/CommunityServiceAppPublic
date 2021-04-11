@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/settings_view"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/fifty_percent_of_gainsboro"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/announcement_button"
+            android:text="@string/announcement_title"
+            app:icon="@drawable/ic_baseline_navigate_next_grey_24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/settings_view"
+            style="@style/settings_text_material_button_style" />
+
+        <View
+            android:id="@+id/announcement_button_bottom_line"
+            app:layout_constraintTop_toBottomOf="@+id/announcement_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            style="@style/view_as_bottom_line" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/FAQ_button"
+            android:text="@string/faq_text"
+            app:icon="@drawable/ic_baseline_navigate_next_grey_24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/announcement_button_bottom_line"
+            style="@style/settings_text_material_button_style" />
+
+        <View
+            android:id="@+id/FAQ_button_bottom_line"
+            app:layout_constraintTop_toBottomOf="@+id/FAQ_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            style="@style/view_as_bottom_line" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/feedback_button"
+            android:text="@string/feedback_text"
+            app:icon="@drawable/ic_baseline_navigate_next_grey_24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/FAQ_button_bottom_line"
+            style="@style/settings_text_material_button_style" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

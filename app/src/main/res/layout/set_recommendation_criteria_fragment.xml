@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:context=".ui.setRecommendationCriteria.SetRecommendationCriteriaFragment">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/set_preferred_location_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/criteria_step_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="18dp"
+                    android:text="@string/criteria_step_one"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/skip_set_location_button"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/skip_set_location_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginTop="14dp"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:insetBottom="2dp"
+                    android:insetTop="2dp"
+                    android:insetRight="2dp"
+                    android:insetLeft="2dp"
+                    android:text="@string/skip_text"
+                    android:textSize="13sp"
+                    android:textColor="@color/gray"
+                    android:textAllCaps="false"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/criteria_step_one"
+                    style="@style/Widget.MaterialComponents.Button.TextButton" />
+
+                <TextView
+                    android:id="@+id/set_location_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:text="@string/criteria_step_one_title"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/criteria_step_one" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/select_all_location_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="30dp"
+                    android:text="@string/select_all_text"
+                    android:textSize="13sp"
+                    android:textColor="@color/faintblue"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:textAllCaps="false"
+                    android:layout_marginTop="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/set_location_title"
+                    style="@style/Widget.MaterialComponents.Button.TextButton" />
+
+                <FrameLayout
+                    android:id="@+id/kuala_lumpur_option"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="27dp"
+                    android:layout_marginEnd="27dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/select_all_location_button">
+
+                    <ImageButton
+                        android:id="@+id/imageButton_kuala_lumpur"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/kuala_lumpur"
+                        android:background="@null" />
+
+                    <ImageView
+                        android:id="@+id/kuala_lumpur_option_checkmark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:visibility="gone"
+                        android:elevation="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:src="@drawable/check_circle_green_18dp" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/selangor_option"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="27dp"
+                    android:layout_marginEnd="27dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/kuala_lumpur_option">
+
+                    <ImageButton
+                        android:id="@+id/imageButton_selangor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/selangor"
+                        android:background="@null" />
+
+                    <ImageView
+                        android:id="@+id/selangor_option_checkmark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:visibility="gone"
+                        android:elevation="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:src="@drawable/check_circle_green_18dp" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/putrajaya_option"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="27dp"
+                    android:layout_marginEnd="27dp"
+                    android:paddingBottom="35dp"
+                    app:layout_constraintVertical_bias="0"
+                    app:layout_constraintBottom_toTopOf="@id/reset_set_location_button"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/selangor_option">
+
+                    <ImageButton
+                        android:id="@+id/imageButton_putrajaya"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/putrajaya"
+                        android:background="@null" />
+
+                    <ImageView
+                        android:id="@+id/putrajaya_option_checkmark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:elevation="5dp"
+                        android:visibility="gone"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:src="@drawable/check_circle_green_18dp" />
+
+                </FrameLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/reset_set_location_button"
+                    android:layout_width="0dp"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="17dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:text="@string/reset_text"
+                    android:textSize="14sp"
+                    android:textColor="@color/gray"
+                    android:backgroundTint="@color/light_shade_of_grey"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/next_button"
+                    style="@style/outlined_material_button_style" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/next_button"
+                    android:layout_width="0dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="@string/next_text"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    style="@style/material_button_style" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/set_preferred_job_nature_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/criteria_step_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="18dp"
+                    android:text="@string/criteria_step_two"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/skip_set_job_nature_button"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/skip_set_job_nature_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginTop="14dp"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:insetBottom="2dp"
+                    android:insetTop="2dp"
+                    android:insetRight="2dp"
+                    android:insetLeft="2dp"
+                    android:text="@string/skip_text"
+                    android:textSize="13sp"
+                    android:textColor="@color/gray"
+                    android:textAllCaps="false"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/criteria_step_two"
+                    style="@style/Widget.MaterialComponents.Button.TextButton" />
+
+                <TextView
+                    android:id="@+id/set_job_nature_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="50dp"
+                    android:text="@string/criteria_step_two_title"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/criteria_step_two" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/select_all_job_nature_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="30dp"
+                    android:text="@string/select_all_text"
+                    android:textSize="13sp"
+                    android:textColor="@color/faintblue"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:textAllCaps="false"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/set_job_nature_title"
+                    style="@style/Widget.MaterialComponents.Button.TextButton" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/job_nature_chip_group"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="32dp"
+                    app:chipSpacingHorizontal="5dp"
+                    app:chipSpacingVertical="7dp"
+                    android:paddingBottom="45dp"
+                    app:layout_constraintVertical_bias="0"
+                    app:layout_constraintBottom_toTopOf="@id/reset_set_job_nature_button"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/select_all_job_nature_button" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/reset_set_job_nature_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="17dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:text="@string/reset_text"
+                    android:textSize="14sp"
+                    android:textColor="@color/gray"
+                    android:backgroundTint="@color/light_shade_of_grey"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/done_button"
+                    style="@style/outlined_material_button_style" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/done_button"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="@string/done_text"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    style="@style/material_button_style" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </FrameLayout>
+
+    </ScrollView>
+
+</layout>

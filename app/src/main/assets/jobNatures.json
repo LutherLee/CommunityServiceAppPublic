@@ -1,0 +1,128 @@
+[
+    {
+      "isDeleted" : false,
+      "jobNatureID" : "-MXDMz8sztlrExnp5pbF",
+      "type" : "Advocacy",
+      "updatedAt" : 1617296355
+    },
+    {
+      "isDeleted" : false,
+      "jobNatureID" : "-MXDMz8v1gRFNXy7EbjX",
+      "type" : "Animal Welfare",
+      "updatedAt" : 1617296355
+    },
+    {
+      "isDeleted" : false,
+      "jobNatureID" : "-MXDMz8wprQr1ozc0JEr",
+      "type" : "Children",
+      "updatedAt" : 1617296355
+    },
+    {
+      "isDeleted" : false,
+      "jobNatureID" : "-MXDMz8wprQr1ozc0JEs",
+      "type" : "Culture",
+      "updatedAt" : 1617296355
+    },
+    {
+      "isDeleted" : false,
+      "jobNatureID" : "-MXDMz8wprQr1ozc0JEt",
+      "type" : "Differently Abled",
+      "updatedAt" : 1617296355
+    },
+    {
+      "isDeleted" : false,
+      "jobNatureID" : "-MXDMz8xpd204YPD9Ycb",
+      "type" : "Education",
+      "updatedAt" : 1617296355
+    },
+    {
+      "isDeleted" : false,
+      "jobNatureID" : "-MXDMz8xpd204YPD9Ycc",
+      "type" : "Environment",
+      "updatedAt" : 1617296355
+    },
+    {
+      "isDeleted" : false,
+      "jobNatureID" : "-MXDMz8xpd204YPD9Ycd",
+      "type" : "Featured Organisations",
+      "updatedAt" : 1617296355
+    },
+    {
+      "isDeleted" : false,
+      "jobNatureID" : "-MXDMz8yPlGJ2Xbmebmv",
+      "type" : "Health",
+      "updatedAt" : 1617296355
+    },
+    {
+      "isDeleted" : false,
+      "jobNatureID" : "-MXDMz8yPlGJ2Xbmebmw",
+      "type" : "Orang Asli",
+      "updatedAt" : 1617296355
+    },
+    {
+      "isDeleted" : false,
+      "jobNatureID" : "-MXDMz8yPlGJ2Xbmebmx",
+      "type" : "Other Communities",
+      "updatedAt" : 1617296355
+    },
+    {
+      "isDeleted" : false,
+      "jobNatureID" : "-MXDMz8yPlGJ2Xbmebmy",
+      "type" : "Recommended",
+      "updatedAt" : 1617296355
+    },
+    {
+      "isDeleted" : false,
+      "jobNatureID" : "-MXDMz8yPlGJ2Xbmebmz",
+      "type" : "Refugees",
+      "updatedAt" : 1617296355
+    },
+    {
+      "isDeleted" : false,
+      "jobNatureID" : "-MXDMz8zkNnjp4HLZfAt",
+      "type" : "Senior Citizens",
+      "updatedAt" : 1617296355
+    },
+    {
+      "isDeleted" : false,
+      "jobNatureID" : "-MXDMz8zkNnjp4HLZfAu",
+      "type" : "Single Parents",
+      "updatedAt" : 1617296355
+    },
+    {
+      "isDeleted" : false,
+      "jobNatureID" : "-MXDMz8zkNnjp4HLZfAv",
+      "type" : "Social Enterprise",
+      "updatedAt" : 1617296355
+    },
+    {
+      "isDeleted" : false,
+      "jobNatureID" : "-MXDMz8zkNnjp4HLZfAw",
+      "type" : "Sponsors",
+      "updatedAt" : 1617296355
+    },
+    {
+      "isDeleted" : false,
+      "jobNatureID" : "-MXDMz9-unpuGsBFjrnf",
+      "type" : "Support Groups",
+      "updatedAt" : 1617296355
+    },
+    {
+      "isDeleted" : false,
+      "jobNatureID" : "-MXDMz9-unpuGsBFjrng",
+      "type" : "Tax Exemption",
+      "updatedAt" : 1617296355
+    },
+    {
+      "isDeleted" : false,
+      "jobNatureID" : "-MXDMz9-unpuGsBFjrnh",
+      "type" : "Women",
+      "updatedAt" : 1617296355
+    },
+    {
+      "isDeleted" : false,
+      "jobNatureID" : "-MXDMz9-unpuGsBFjrni",
+      "type" : "Youth",
+      "updatedAt" : 1617296355
+    }
+  ]

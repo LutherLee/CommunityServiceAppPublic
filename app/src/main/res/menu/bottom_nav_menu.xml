@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/homeFragment"
+        android:title="Home"
+        app:showAsAction="always"
+        android:orderInCategory="1"
+        android:icon="@drawable/ic_baseline_home_grey_24dp"/>
+
+    <item android:id="@+id/recipientFilterFragment"
+        android:title="Filter"
+        app:showAsAction="always"
+        android:orderInCategory="2"
+        android:icon="@drawable/ic_baseline_filter_list_24"/>
+
+    <item android:id="@+id/mapFragment"
+        android:title="Map"
+        app:showAsAction="always"
+        android:orderInCategory="3"
+        android:icon="@drawable/ic_baseline_map_grey_24dp"/>
+
+    <item android:id="@+id/profileFragment"
+        android:title="Profile"
+        app:showAsAction="always"
+        android:orderInCategory="4"
+        android:icon="@drawable/ic_baseline_account_circle_grey_26dp"/>
+
+</menu>
