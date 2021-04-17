@@ -1,4 +1,4 @@
- CommunityServiceAppPublic 
+# CommunityServiceAppPublic
 Public version of Community Service App (Triber) with sensitive keys removed as follows:
 - Google Maps Api Key
 - Firebase Key
