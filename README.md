@@ -5,9 +5,8 @@ Public version of Community Service App (Triber) with sensitive keys removed as 
 - Google AdMob
 
 This is a showcase of the code implementation for the project. #Work in Progress
-![](https://github.com/Screenshots/V1.0.0/SetJobNatureRecommendation.jpg?raw=true)
 
-You can download the app at &nbsp; [<img src="Screenshots/V1.0.0/playstore.png" margin="10" width="110" height="35">](https://play.google.com/store/apps/details?id=com.communityserviceapp.triber)
+You can download the app at &nbsp; [<img src="Screenshots/V1.0.0/playstore.png" margin="10" width="110" height="35">](https://play.google.com/store/apps/details?id=com.communityserviceapp.triber) [<img src="https://img.samsungapps.com/seller/images/badges/galaxyStore/png_big/GalaxyStore_English.png?ver=1617639800000" width="120" height="35">](https://galaxy.store/triber)
 <br><br>
 
 ## What is Triber?
