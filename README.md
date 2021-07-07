@@ -22,27 +22,27 @@ __Objectives__<br>
 2) To build recognition for the help rendered to the needy and contribution made for the development of society.
 3) To understand the social issues and responsibilities to gain a sense of belonging to the society.  
 
-__Application of AI__<br>
+<br>__Application of AI__<br>
 The app uses two concept to recommend relevant service recipients:
 1) Knowledge-Based Filtering (KBF)
 2) Content-Based Filtering (CBF)
 
-*__Knowledge-Based Filtering__*<br>
+<br>*__Knowledge-Based Filtering__*<br>
 Based on users’ explicitly predefined recommendation criteria:<br>
 - Location of service recipients (e.g. Selangor, Kedah, etc.)
 - Job nature of service recipients (e.g. Environment, Children, Health, etc.)
 
 This approach is similar to filtering which provide a very wide scope of recommendation and is used as the basis of recommendation.
 
-*__Content-Based Filtering__*<br>
-Based on the service recipient that the user visited, commented and rated on, a weight is assigned for these three actions performed by the user as shown below.
-<img src="Screenshots/V1.0.0/CBF_1.jpg" width="300">
+<br>*__Content-Based Filtering__*<br>
+Based on the service recipient that the user visited, commented and rated on, a weight is assigned for these three actions performed by the user as shown below.<br><br>
+<img src="Screenshots/V1.0.0/CBF_1.jpg" width="230">
 
-Once a user completes any of the action above, the job nature of the service recipient is recorded and given a score based on the action’s weight. This information is recorded for each session the user uses the app and the score is added incrementally for repeating job nature found as shown below.
-<img src="Screenshots/V1.0.0/CBF_2.jpg" width="300">
+Once a user completes any of the action above, the job nature of the service recipient is recorded and given a score based on the action’s weight. This information is recorded for each session the user uses the app and the score is added incrementally for repeating job nature found as shown below.<br><br>
+<img src="Screenshots/V1.0.0/CBF_2.jpg" width="230">
 
-Then, the top five highest score job nature related service recipients will be recommended to user based on their previous interaction and display in the recommendations tab as shown below.
-<img src="Screenshots/V1.0.0/CBF_3.jpg" width="300">
+Then, the top five highest score job nature related service recipients will be recommended to user based on their previous interaction and display in the recommendations tab as shown below.<br><br>
+<img src="Screenshots/V1.0.0/CBF_3.jpg" width="230">
 
 The computation is executed on the mobile device and user’s past app usage behaviour information will be stored in local database.
 
