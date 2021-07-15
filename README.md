@@ -113,6 +113,7 @@ Others
 - [FloatingSearchView](https://github.com/arimorty/floatingsearchview)
 - [Lottie](https://github.com/airbnb/lottie-android)
 - [Loupe](https://github.com/igreenwood/loupe)
+- [Proguard and R8](https://developer.android.com/studio/build/shrink-code)
 
 <br><br>
 ## Interested to Help?
