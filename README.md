@@ -9,6 +9,15 @@ This is a showcase of the code implementation for the project. #Work in Progress
 You can download the app at &nbsp; [<img src="Screenshots/V1.0.0/playstore.png" margin="10" width="110" height="35">](https://play.google.com/store/apps/details?id=com.communityserviceapp.triber) [<img src="https://img.samsungapps.com/seller/images/badges/galaxyStore/png_big/GalaxyStore_English.png?ver=1617639800000" width="120" height="35">](https://galaxy.store/triber)
 <br><br>
 
+Table of contents
+=================
+   * [What is Triber?](#what-is-triber)
+   * [Screenshots](#screenshots)
+   * [Tech Stack](#tech-stack)
+   * [Interested to Help?](#interested-to-help)
+   * [Acknowledgement](#acknowledgement)
+<br><br>
+
 ## What is Triber?
 It all started as a project to make finding where to volunteer easier on the mobile platform with the option to navigate to the address efficiently. Triber at its core is a mobile app volunteering directory for Malaysia with the ability to suggest the relevant service recipients based on users’ preferences and app usage behaviour.
 
