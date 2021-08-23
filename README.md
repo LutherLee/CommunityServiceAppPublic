@@ -1,4 +1,4 @@
-# CommunityServiceAppPublic
+# CommunityServiceAppPublic ![Download Status](https://playbadges.pavi2410.me/badge/downloads?id=com.communityserviceapp.triber) ![Rating Status](https://PlayBadges.pavi2410.me/badge/ratings?id=com.communityserviceapp.triber)
 Public version of Community Service App (Triber) with sensitive keys removed as follows:
 - Google Maps Api Key
 - Firebase Key
